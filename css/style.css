@@ -1,0 +1,9 @@
+.pokebutton {
+    border: none;
+    background-color: #e9e8d9;
+    color: #738678;
+}
+.pokebutton:focus {
+    cursor: pointer;
+    opacity: 0.8;
+}
