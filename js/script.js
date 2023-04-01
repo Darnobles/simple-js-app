@@ -15,7 +15,11 @@ pokemonList.forEach (function(pokemon) {
 });
 
 let pokemonRepository = (function () {
-    let pokemonList = [];
+    let pokemonList = [
+    {name: "charmander", height: 1.8, type: ["fire", "speed"]},
+    {name: "sandshrew", height: 1, type: ["ground", "rock"]},
+    {name: "kakuna", height: .5, type: ["bug", "poison"]}
+    ];
 
     function add(pokemon) {
         pokemonList.push(pokemon);
@@ -25,7 +29,7 @@ let pokemonRepository = (function () {
         return pokemonList;
     }
 
-    function showdetails (pokemon) {
+    function showDetails (pokemon) {
         console.log(pokemon.name)
     }
 
@@ -37,13 +41,14 @@ let pokemonRepository = (function () {
     button.classList.add('pokebutton');
     listItem.appendChild(button);
     ul.appendChild(listItem);
-
-    };
-
-    let button = document.querySelector('button');
+    
     button.addEventListener ('click', function (event) {
-        console.log(showdetails);
+        showDetails(pokemon)
+
     });
+    }
+
+    pokemonList.forEach(addListItem);
 
     return {
         add: add,
