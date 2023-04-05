@@ -33,7 +33,7 @@ let pokemonRepository = (function () {
         return fetch(apiUrl).then(function (response) {
             return response.json();
         }).then(function (json) {
-            json.results.foreach(function (item) {
+            json.results.forEach(function (item) {
                 let pokemon = {
                     name: item.name,
                     detailsUrl: item.url
@@ -45,13 +45,13 @@ let pokemonRepository = (function () {
         });
     }
 
-    function loadDetails(item) {
-        let url = item.detailsUrl;
+    function loadDetails(pokemon) {
+        let url = pokemon.detailsUrl;
         return fetch(url).then(function (response) {
             return response.json();
         }).then(function (details) {
-            item.imageUrl = details.sprites.front_default;
-            item.height = details.height;
+            pokemon.imageUrl = details.sprites.front_default;
+            pokemon.height = details.height;
         }).catch(function (e) {
             console.error(e);
         });
