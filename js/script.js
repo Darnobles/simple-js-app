@@ -57,12 +57,12 @@ let pokemonRepository = (function () {
         });
     }
     
-    function pokebutton() {
-        let modalContainer = document.querySelector('modal-container');
+    function showModal() {
+        let modalContainer = document.querySelector('#modal-container');
         modalContainer.classList.add('is-visible');
 
-        document.querySelector('#pokebutton').addEventListener('click', () => {
-            pokebutton();
+        document.querySelector('.pokebutton').addEventListener('click', () => {
+            showModal();
         });
     }
 
