@@ -58,7 +58,7 @@ let pokemonRepository = (function () {
     }
     
     function pokebutton() {
-        let modelContainer = document.querySelector('modal-container');
+        let modalContainer = document.querySelector('modal-container');
         modalContainer.classList.add('is-visible');
 
         document.querySelector('#pokebutton').addEventListener('click', () => {
