@@ -12,7 +12,7 @@ let pokemonRepository = (function () {
 
     function showDetails(pokemon) {
         loadDetails(pokemon).then(function () {
-        // showModal(pokemon)
+        showModal(pokemon)
         console.log(pokemon.name)
         });
     }
