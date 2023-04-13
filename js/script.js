@@ -27,7 +27,6 @@ let pokemonRepository = (function () {
 
         button.addEventListener('click', function (event) {
             showDetails(pokemon);
-            showModal(pokemon);
         });
     }
 
@@ -82,16 +81,19 @@ let pokemonRepository = (function () {
         let contentElement = document.createElement('p');
         contentElement.innerText = 'Height: ' + (pokemon.height);
 
+        modal.appendChild(closeButtonElement);
+        modal.appendChild(titleElement);
+        modal.appendChild(contentElement);
+
+        if (pokemon.imageUrl) {
         let imagePokemon = document.createElement('img');
         imagePokemon.setAttribute('src', pokemon.imageUrl);
         imagePokemon.setAttribute('height', '230');
         imagePokemon.setAttribute('width', '300' );
         imagePokemon.setAttribute('alt', "Pokemon Image");
-
-        modal.appendChild(closeButtonElement);
-        modal.appendChild(titleElement);
-        modal.appendChild(contentElement);
         modal.appendChild(imagePokemon);
+        }
+
         modalContainer.appendChild(modal);
 
         modalContainer.classList.add('is-visible');
