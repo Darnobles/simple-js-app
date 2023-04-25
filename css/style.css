@@ -65,6 +65,7 @@
   .modal p {
     margin-bottom: 0;
   } */
+  html,
   body {
     font-family: Arial, sans-serif;
   }
