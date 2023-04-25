@@ -12,12 +12,34 @@
         <link rel="script" type="text/script" href="dist/script.dist.js">
     </head>
     <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Pokebar</a>
+        <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Placeholder</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Placeolder</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
         <h1>Pokedex</h1>
         <ul class="pokemon-list" list-group></ul>
         <div id="modal-container">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Launch demo modal
-                </button>
+                </button> -->
               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -28,7 +50,7 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                      ...
+                      <!-- ... -->
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
