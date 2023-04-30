@@ -3,16 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Simple JS APP</title>
+        <title>Pokedex</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
         crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="dist/style.dist.css">
         <link rel="script" type="text/script" href="dist/script.dist.js">
     </head>
     <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1e6687;">
         <a class="navbar-brand" href="#">Pokebar</a>
         <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -22,16 +21,11 @@
             <li class="nav-item active">
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Placeholder</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Placeolder</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
           </ul>
+          <form class = "form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
         </div>
       </nav>
         <h1>Pokedex</h1>
@@ -46,7 +40,7 @@
                       </button>
                     </div>
                     <div class="modal-body modal-text">
-                    <div class="'modal-info modal-text">
+                    <div class="modal-info modal-text">
                     </div>
                     </div>
                     <div class="modal-footer">
@@ -55,10 +49,9 @@
                   </div>
                 </div>
               </div>
-        <strong>
             <script src="js/promise-polyfill.js"></script>
             <script src="js/fetch-polyfill.js"></script>
-            <script src="js/script.js"></script>
+            <script src="dist/script.dist.js"></script>
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
             crossorigin="anonymous"></script>
@@ -68,6 +61,5 @@
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
             integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
             crossorigin="anonymous"></script>
-        </strong>
     </body>
 </html>
