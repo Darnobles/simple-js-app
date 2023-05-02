@@ -48,7 +48,6 @@ let pokemonRepository = (function () {
                     name: item.name.charAt(0).toUpperCase() + item.name.slice(1),
                     height: item.height,
                     types: item.types,
-                    moves: item.moves[0,1],
                     weight: item.weight,
                     detailsUrl: item.url,
                 };
@@ -70,8 +69,7 @@ let pokemonRepository = (function () {
             pokemon.height = details.height;
             pokemon.types = details.types;
             pokemon.sprite = details.sprites.front_default;
-            pokemon.sprite = details.sprite.back_default;
-            pokemon.moves = details.moves[0,1];
+            pokemon.sprite2 = details.sprites.back_default;
             pokemon.weight = details.weight;
         })
           .catch(function (e) {
@@ -95,34 +93,53 @@ let pokemonRepository = (function () {
             type1 = pokemon.types[0].type['name'];
             type2 = pokemon.types[1].type['name'];
             $(".modal-body").html(
-                "<p>" +
+                "<p>" + "Height: " +
                   pokemon.height / 10 +
                   "m" +
                   "</p>" +
-                  "<p>" +
+                  "<p>" + "Type: " +
                   type1 +
                   ", " +
                   type2 +
                   "</p>" +
+                  "<p>" + "Weight: " +
+                  pokemon.weight + "lbs." +
+                  "</p>" +
                   "<img src=" +
                   '"' +
                   pokemon.sprite +
+                  '"' +
+                  "/>" +
+                  "<img src=" +
+                  '"' + 
+                  pokemon.sprite2 +
                   '"' +
                   "/>"
               );
+            // $(".modal-body").html()
         } else {
             type1 = pokemon.types[0].type['name'];
             $(".modal-body").html(
-                "<p>" +
+                "<p>" + "Height: " +
                   pokemon.height / 10 +
                   "m" +
                   "</p>" +
-                  "<p>" +
+                  "<p>" + "Type: " +
                   type1 +
+                  ", " +
+                  type2 +
+                  "</p>" +
+                  "<p>" + "Weight: " +
+                  pokemon.weight + "lbs." +
                   "</p>" +
                   "<img src=" +
                   '"' +
                   pokemon.sprite +
+                  '"' +
+                  "/>" +
+                  "<img src=" +
+                  '"' + 
+                  pokemon.sprite2 +
                   '"' +
                   "/>"
               );
@@ -134,12 +151,13 @@ let pokemonRepository = (function () {
         getAll: getAll,
         loadList:loadList,
         addListItem: addListItem,
+        loadDetails: loadDetails,
     };
 })();
 
 
 pokemonRepository.loadList().then(function () {
     pokemonRepository.getAll().forEach(function (pokemon, index) {
-        pokemonRepository.addListItem(pokemon, index + 1)
+        pokemonRepository.addListItem(pokemon, index + 1);
     });
 });

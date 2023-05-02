@@ -8,8 +8,8 @@ Pokemon index containing infomation for 150 pokemon.
 * Name
 * Height
 * Type
-* Abilities
-*  and Picture
+* Weight
+*  and Pictures (front and back)
 
 ## Technology used
 
