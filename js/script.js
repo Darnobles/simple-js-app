@@ -126,8 +126,6 @@ let pokemonRepository = (function () {
                   "</p>" +
                   "<p>" + "Type: " +
                   type1 +
-                  ", " +
-                  type2 +
                   "</p>" +
                   "<p>" + "Weight: " +
                   pokemon.weight + "lbs." +
